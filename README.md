@@ -19,10 +19,3 @@ The aim of this project is to simulate a hospital system and improve modular pro
 
 ## Author
 Ebru Tugce Polat
-
-
-![Login Screen](HospitalManagementCore1/screenshots/PatientDoctor%20Login%20Screen.png)
-
-![Portal Selection](HospitalManagementCore1/screenshots/portalSelection1.png)
-
-![Appointment Page](HospitalManagementCore1/screenshots/Resim13.png)
