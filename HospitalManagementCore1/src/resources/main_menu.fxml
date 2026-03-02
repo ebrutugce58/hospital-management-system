@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.controllers.MainMenuController"
+      spacing="14">
+
+    <padding>
+        <Insets top="24" right="24" bottom="24" left="24"/>
+    </padding>
+
+    <Label text="Hospital Management System"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    
+    <GridPane hgap="12" vgap="12">
+        <Button text="Register Patient" onAction="#goRegister" prefWidth="220"
+                GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <Button text="Book Appointment" onAction="#goBook" prefWidth="220"
+                GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Button text="Cancel Appointment" onAction="#goCancel" prefWidth="220"
+                GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <Button text="Doctor Queue" onAction="#goDoctorQueue" prefWidth="220"
+                GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Button text="Patient History" onAction="#goHistory" prefWidth="220"
+                GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    </GridPane>
+
+    <Separator/>
+
+    <Label fx:id="lblInfo" text="" wrapText="true"/>
+</VBox>

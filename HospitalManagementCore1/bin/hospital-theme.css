@@ -1,0 +1,35 @@
+/* ===================== */
+/* SIDEBAR (LACİVERT)    */
+/* ===================== */
+
+.sidebar {
+    -fx-background-color: #0F2A44;
+    -fx-padding: 24 16;
+}
+
+/* Logo / Başlık */
+.sidebar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+}
+
+.sidebar-subtitle {
+    -fx-text-fill: rgba(255,255,255,0.7);
+}
+.menu-btn {
+    -fx-background-color: rgba(255,255,255,0.10);
+    -fx-text-fill: white;
+    -fx-background-radius: 14;
+    -fx-padding: 12 14;
+    -fx-font-weight: 600;
+}
+
+.menu-btn:hover {
+    -fx-background-color: rgba(255,255,255,0.22);
+}
+/* Ana içerik alanı */
+.content-area {
+    -fx-background-color: #F7FAFC;
+    -fx-padding: 36;
+}

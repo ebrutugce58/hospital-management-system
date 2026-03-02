@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.controllers.CancelAppointmentController"
+      spacing="14"
+      styleClass="page-card">
+
+    <padding>
+        <Insets top="28" right="28" bottom="28" left="28"/>
+    </padding>
+
+    <Label text="Cancel Appointment" styleClass="page-title"/>
+
+    <Label fx:id="lblLoggedIn" text="Logged in patient: -" style="-fx-text-fill:#374151;"/>
+
+    <!-- ✅ Admin için patient seçimi (patient login’de gizlenir) -->
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label fx:id="lblPick" text="Select patient:"/>
+        <ComboBox fx:id="cbPatient" prefWidth="420"/>
+        
+    </HBox>
+
+    <Label text="Active appointments:"/>
+    <ListView fx:id="lvAppointments" prefHeight="320"/>
+
+    <HBox alignment="CENTER_RIGHT">
+        <Button text="Cancel Selected Appointment" onAction="#onCancel" styleClass="btn-primary"/>
+    </HBox>
+
+    <Label fx:id="lblInfo" text="" wrapText="true" style="-fx-text-fill:#6B7280;"/>
+</VBox>
+

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="ui.controllers.RegisterPatientController"
+           styleClass="page-bg">
+
+    <!-- İKİ KOLON: SOL (brand) + SAĞ (form) -->
+    <HBox alignment="CENTER" styleClass="rl-root">
+
+      <!-- SOL BRAND PANEL -->
+<VBox spacing="10"
+      prefWidth="420"
+      alignment="TOP_LEFT"
+      styleClass="rl-left">
+
+    <padding>
+        <Insets top="40" right="32" bottom="32" left="32"/>
+    </padding>
+
+    <ImageView fitWidth="230"
+               preserveRatio="true"
+               smooth="true"
+               styleClass="brand-logo">
+        <image>
+            <Image url="@images/sbtu_logo.png"/>
+        </image>
+
+        <!-- LOGO AYARI (aynı Portal/Login gibi) -->
+        <VBox.margin>
+            <Insets left="40"/>
+        </VBox.margin>
+    </ImageView>
+
+    <Label text="Welcome to SBTÜ Hospital" styleClass="rl-welcome"/>
+    <Label text="Hospital" styleClass="rl-brand-title"/>
+    <Label text="Management System" styleClass="rl-brand-subtitle"/>
+
+    <Label text="Create an account to book appointments and access your records."
+           styleClass="rl-brand-desc"
+           wrapText="true"/>
+
+    <Region VBox.vgrow="ALWAYS"/>
+    <Label text="© 2025 Hospital Systems" styleClass="rl-brand-foot"/>
+</VBox>
+
+
+        <!-- SAĞ FORM ALANI -->
+        <StackPane HBox.hgrow="ALWAYS" styleClass="rl-right">
+           <VBox styleClass="page-card"
+      spacing="12"
+      maxWidth="540"
+      prefWidth="540">
+
+
+                <padding>
+                  <Insets top="22" right="26" bottom="22" left="26"/>
+
+                </padding>
+
+                <Label text="Register New Patient" styleClass="page-title"/>
+
+               <GridPane hgap="14" vgap="10">
+
+                    <!-- Label'lara class -->
+                    <Label text="National ID:" styleClass="field-label"
+                           GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <TextField fx:id="tfNationalId" prefWidth="260"
+                               styleClass="auth-input"
+                               GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                    <Label text="Name:" styleClass="field-label"
+                           GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <TextField fx:id="tfName" prefWidth="260"
+                               styleClass="auth-input"
+                               GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                    <Label text="Surname:" styleClass="field-label"
+                           GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <TextField fx:id="tfSurname" prefWidth="260"
+                               styleClass="auth-input"
+                               GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                    <Label text="Phone:" styleClass="field-label"
+                           GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <TextField fx:id="tfPhone" prefWidth="260"
+                               styleClass="auth-input"
+                               GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                  <Label text="Password:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+
+<StackPane GridPane.rowIndex="4" GridPane.columnIndex="1">
+    <PasswordField fx:id="pfPassword" prefWidth="260"
+                   promptText="Password"
+                   styleClass="auth-input"/>
+
+    <TextField fx:id="tfPasswordVisible" prefWidth="260"
+               promptText="Password"
+               visible="false" managed="false"
+               styleClass="auth-input"/>
+
+    <Button text="👁"
+            onAction="#togglePassword"
+            StackPane.alignment="CENTER_RIGHT"
+            styleClass="icon-button"/>
+</StackPane>
+
+
+                   <Label text="Confirm Password:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+
+<StackPane GridPane.rowIndex="5" GridPane.columnIndex="1">
+    <PasswordField fx:id="pfConfirmPassword" prefWidth="260"
+                   promptText="Confirm password"
+                   styleClass="auth-input"/>
+
+    <TextField fx:id="tfConfirmPasswordVisible" prefWidth="260"
+               promptText="Confirm password"
+               visible="false" managed="false"
+               styleClass="auth-input"/>
+
+    <Button text="👁"
+            onAction="#toggleConfirmPassword"
+            StackPane.alignment="CENTER_RIGHT"
+            styleClass="icon-button"/>
+</StackPane>
+
+                </GridPane>
+
+               <Button text="Register Patient"
+        onAction="#onRegister"
+        styleClass="btn btn-primary"
+        maxWidth="Infinity"/>
+
+                <!-- Back + Go to Login -->
+                <HBox spacing="10">
+                    <Button fx:id="btnBack"
+                            text="Back"
+                            onAction="#onBack"
+                            styleClass="btn-secondary"/>
+
+                    <Button fx:id="btnGoLogin"
+                            text="Go to Login"
+                            onAction="#onGoLogin"
+                            styleClass="btn-primary"/>
+                </HBox>
+
+                <Separator/>
+
+                <Label fx:id="lblRegisteredPatients"
+                       text="Registered Patients:"
+                       styleClass="section-title"/>
+
+                <ListView fx:id="lvPatients" prefHeight="220"/>
+
+            </VBox>
+        </StackPane>
+
+    </HBox>
+
+</StackPane>
+
+
+

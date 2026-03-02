@@ -1,0 +1,102 @@
+/* ================== GENEL ================== */
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+    -fx-background-color: #f4f7fb;
+}
+
+/* ================== SOL MENÜ ================== */
+.sidebar {
+    -fx-background-color: #2f80ed;
+}
+
+/* Logo alanı */
+.sidebar-header {
+    -fx-padding: 6 4 10 4;
+}
+
+/* Hastane ikonu */
+.sidebar-logo {
+    -fx-font-size: 28px;
+}
+
+/* Ana başlık */
+.sidebar-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Alt başlık */
+.sidebar-subtitle {
+    -fx-font-size: 11px;
+    -fx-text-fill: rgba(255,255,255,0.85);
+}
+
+/* ================== MENÜ BUTONLARI ================== */
+.menu-button {
+    -fx-background-color: rgba(255,255,255,0.15);
+    -fx-text-fill: white;
+    -fx-background-radius: 12;
+    -fx-padding: 10 14;
+}
+
+.menu-button:hover {
+    -fx-background-color: rgba(255,255,255,0.28);
+}
+
+/* ⚠️ ÖNEMLİ DÜZELTME
+   :selected JavaFX Button’da çalışmaz
+   Biz class kullanıyoruz */
+.menu-button-active {
+    -fx-background-color: white;
+    -fx-text-fill: #2f80ed;
+    -fx-font-weight: bold;
+}
+
+/* ================== SAYFA KARTI ================== */
+.page-card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-border-radius: 16;
+    -fx-border-color: #e0e6ed;
+    -fx-padding: 20;
+}
+
+/* Sayfa başlığı */
+.page-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1f2937;
+}
+
+/* ================== FORM ELEMANLARI ================== */
+.text-field, .combo-box {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 6 10;
+}
+
+/* ================== BUTONLAR ================== */
+.primary-button {
+    -fx-background-color: #2f80ed;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-padding: 8 16;
+}
+
+.primary-button:hover {
+    -fx-background-color: #256bd6;
+}
+
+/* Secondary */
+.secondary-button {
+    -fx-background-color: #e5e7eb;
+    -fx-background-radius: 12;
+    -fx-padding: 8 16;
+	
+	
+}
+
+

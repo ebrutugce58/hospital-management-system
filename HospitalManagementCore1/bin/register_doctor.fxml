@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ui.controllers.RegisterDoctorController"
+      spacing="14"
+      styleClass="page-card">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Register Doctor" styleClass="page-title"/>
+
+    <GridPane hgap="12" vgap="12">
+
+        <Label text="Doctor ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtDoctorId" promptText="D1001"
+                   GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtName" promptText="Name"
+                   GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Surname:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <TextField fx:id="txtSurname" promptText="Surname"
+                   GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Department:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <ComboBox fx:id="cbDepartment" promptText="Select department"
+                  GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <!-- ✅ PASSWORD (EKLENDİ) -->
+        <Label text="Password:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <StackPane GridPane.rowIndex="4" GridPane.columnIndex="1">
+            <PasswordField fx:id="pfPassword"
+                           prefWidth="260"
+                           promptText="Password"
+                           styleClass="auth-input"/>
+
+            <TextField fx:id="tfPasswordVisible"
+                       prefWidth="260"
+                       promptText="Password"
+                       visible="false" managed="false"
+                       styleClass="auth-input"/>
+
+            <Button text="👁"
+                    onAction="#togglePassword"
+                    StackPane.alignment="CENTER_RIGHT"
+                    styleClass="icon-button"/>
+        </StackPane>
+
+        <!-- CONFIRM -->
+        <Label text="Confirm Password:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <StackPane GridPane.rowIndex="5" GridPane.columnIndex="1">
+            <PasswordField fx:id="pfConfirmPassword"
+                           prefWidth="260"
+                           promptText="Confirm password"
+                           styleClass="auth-input"/>
+
+            <TextField fx:id="tfConfirmPasswordVisible"
+                       prefWidth="260"
+                       promptText="Confirm password"
+                       visible="false" managed="false"
+                       styleClass="auth-input"/>
+
+            <Button text="👁"
+                    onAction="#toggleConfirmPassword"
+                    StackPane.alignment="CENTER_RIGHT"
+                    styleClass="icon-button"/>
+        </StackPane>
+
+    </GridPane>
+
+    <HBox spacing="10">
+        <Button text="Save" onAction="#onSave" styleClass="btn-primary"/>
+    </HBox>
+
+    <Label fx:id="lblMsg" text="" styleClass="muted"/>
+
+</VBox>
+

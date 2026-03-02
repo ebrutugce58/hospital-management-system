@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+
+<HBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ui.controllers.PortalSelectController"
+         alignment="CENTER"
+      styleClass="rl-root">
+
+    <!-- SOL BRAND PANEL -->
+  <VBox spacing="10"
+      prefWidth="520"
+      alignment="TOP_LEFT"
+      styleClass="rl-left">
+
+    <padding>
+        <Insets top="40" right="32" bottom="32" left="32"/>
+    </padding>
+
+  <ImageView fitWidth="230"
+           preserveRatio="true"
+           smooth="true"
+           styleClass="brand-logo">
+
+    <image>
+        <Image url="@images/sbtu_logo.png"/>
+    </image>
+
+   <VBox.margin>
+    <Insets left="40"/>
+</VBox.margin>
+
+</ImageView>
+
+  
+
+<Label text="Welcome to SBTÜ Hospital" styleClass="rl-welcome"/>
+
+        <Label text="Hospital" styleClass="rl-brand-title"/>
+        <Label text="Management System" styleClass="rl-brand-subtitle"/>
+        <Label text="Secure access for patients, doctors and staff"
+               styleClass="rl-brand-desc" wrapText="true"/>
+
+        <Region VBox.vgrow="ALWAYS"/>
+
+        <Label text="© 2025 Hospital Systems" styleClass="rl-brand-foot"/>
+    </VBox>
+
+    <!-- SAĞ ACTION CARD -->
+  <StackPane prefWidth="640" alignment="CENTER" styleClass="rl-right">
+
+   <VBox spacing="18"
+      prefWidth="480"
+      prefHeight="480"
+      maxWidth="480"
+      maxHeight="480"
+      alignment="CENTER"
+      styleClass="rl-card">
+
+
+
+        <Label text="Choose a portal" styleClass="rl-title"/>
+
+            <padding>
+                <Insets top="34" right="34" bottom="28" left="34"/>
+            </padding>
+
+           
+         
+
+<Label text="Please select how you want to continue"
+       styleClass="page-subtitle"/>
+
+
+            <VBox spacing="12" fillWidth="true">
+                <Button text="Patient / Doctor Login"
+                        onAction="#onUserPortal"
+                        maxWidth="Infinity"
+                        styleClass="rl-btn rl-primary"/>
+
+                <Button text="Admin Login"
+                        onAction="#onAdminPortal"
+                        maxWidth="Infinity"
+                        styleClass="rl-btn rl-outline"/>
+
+                <Button text="Patient Register"
+                        onAction="#onPatientRegister"
+                        maxWidth="Infinity"
+                        styleClass="rl-btn rl-ghost"/>
+            </VBox>
+
+            <Separator styleClass="rl-sep"/>
+
+            <Label text="Tip: Admin portal is for authorized hospital staff only."
+                   styleClass="rl-tip" wrapText="true"/>
+        </VBox>
+    </StackPane>
+
+</HBox>

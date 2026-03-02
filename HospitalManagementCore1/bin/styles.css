@@ -1,0 +1,1136 @@
+/* =========================
+   THEME TOKENS (GLOBAL)
+   ========================= */
+.root{
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+
+    /* palette */
+    -color-bg: #F6F8FC;
+    -color-card: #FFFFFF;
+    -color-text: #111827;
+    -color-muted: #6B7280;
+    -color-border: #E5E7EB;
+
+    -color-primary: #2563EB;
+    -color-primary-dark: #1D4ED8;
+    -color-primary-soft: rgba(37, 99, 235, 0.12);
+
+    -color-danger: #EF4444;
+    -color-success: #10B981;
+
+    -fx-background-color: -color-bg;
+}
+
+/* =========================
+   PAGE BACKGROUND / CARD
+   ========================= */
+   .page-bg {
+       -fx-background-color: linear-gradient(to bottom right, #0F172A, #1E3A8A, #1E40AF);
+   }
+
+.page-card{
+    -fx-background-color: -color-card;
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+    -fx-border-color: -color-border;
+    -fx-border-width: 1px;
+    -fx-padding: 20px;
+}
+
+.page-title{
+    -fx-font-size: 24px;
+    -fx-font-weight: 800;
+    -fx-text-fill: -color-text;
+}
+
+.muted{
+    -fx-text-fill: -color-muted;
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
+.sidebar{
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: -color-border;
+    -fx-border-width: 0 1px 0 0;
+    -fx-padding: 18px 14px 18px 14px;
+}
+
+.sidebar-header{
+    -fx-padding: 8px 6px 14px 6px;
+}
+
+.sidebar-title{
+    -fx-font-size: 18px;
+    -fx-font-weight: 800;
+    -fx-text-fill: -color-text;
+}
+
+.sidebar-subtitle{
+    -fx-text-fill: -color-muted;
+}
+
+.sidebar-sep{
+    -fx-padding: 10px 0 10px 0;
+}
+
+/* =========================
+   BUTTONS (BASE)
+   ========================= */
+.button{
+    -fx-cursor: hand;
+    -fx-background-radius: 14px;
+    -fx-border-radius: 14px;
+    -fx-padding: 10px 14px 10px 14px;
+    -fx-font-weight: 600;
+}
+
+/* Primary / Secondary buttons used in portal */
+.btn-primary{
+    -fx-background-color: -color-primary;
+    -fx-text-fill: white;
+}
+.btn-primary:hover{
+    -fx-background-color: -color-primary-dark;
+}
+.btn-primary:pressed{
+    -fx-background-color: -color-primary-dark;
+    -fx-translate-y: 1px;
+}
+
+.btn-secondary{
+    -fx-background-color: #F3F4F6;
+    -fx-text-fill: -color-text;
+    -fx-border-color: -color-border;
+    -fx-border-width: 1px;
+}
+.btn-secondary:hover{
+    -fx-background-color: #EDEFF3;
+}
+.btn-secondary:pressed{
+    -fx-background-color: #E5E7EB;
+    -fx-translate-y: 1px;
+}
+
+/* Sidebar menu buttons */
+.menu-btn{
+    -fx-background-color: #F7F8FB;
+    -fx-text-fill: -color-text;
+    -fx-border-color: rgba(229,231,235,0.9);
+    -fx-border-width: 1px;
+    -fx-background-radius: 14px;
+    -fx-border-radius: 14px;
+    -fx-padding: 12px 14px 12px 14px;
+}
+.menu-btn:hover{
+    -fx-background-color: #EEF2FF;
+    -fx-border-color: rgba(37,99,235,0.35);
+}
+.menu-btn:pressed{
+    -fx-background-color: #E0E7FF;
+    -fx-translate-y: 1px;
+}
+
+/* Logout button */
+.btn-danger{
+    -fx-background-color: rgba(239,68,68,0.10);
+    -fx-text-fill: #B91C1C;
+    -fx-border-color: rgba(239,68,68,0.25);
+    -fx-border-width: 1px;
+}
+.btn-danger:hover{
+    -fx-background-color: rgba(239,68,68,0.16);
+}
+.btn-danger:pressed{
+    -fx-background-color: rgba(239,68,68,0.22);
+    -fx-translate-y: 1px;
+}
+
+/* =========================
+   INPUTS
+   ========================= */
+.text-field, .password-field, .combo-box, .date-picker{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: -color-border;
+    -fx-border-width: 1px;
+    -fx-padding: 10px 12px 10px 12px;
+}
+.text-field:focused, .password-field:focused, .combo-box:focused, .date-picker:focused{
+    -fx-border-color: rgba(37,99,235,0.55);
+    -fx-effect: dropshadow(gaussian, rgba(37,99,235,0.18), 14, 0.35, 0, 0);
+}
+
+/* ComboBox arrow */
+.combo-box .arrow-button{
+    -fx-background-color: transparent;
+}
+.combo-box .arrow{
+    -fx-background-color: -color-muted;
+}
+
+/* =========================
+   LISTVIEW
+   ========================= */
+.list-view{
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: -color-border;
+    -fx-border-width: 1px;
+    -fx-padding: 6px;
+    -fx-background-color: #FFFFFF;
+}
+
+.list-cell{
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+    -fx-text-fill: -color-text;
+}
+.list-cell:filled:hover{
+    -fx-background-color: rgba(37,99,235,0.08);
+    -fx-background-radius: 10px;
+}
+.list-cell:filled:selected{
+    -fx-background-color: rgba(37,99,235,0.16);
+    -fx-background-radius: 10px;
+}
+
+/* =========================
+   LABELS / INFO
+   ========================= */
+.lbl-error{
+    -fx-text-fill: -color-danger;
+    -fx-font-weight: 600;
+}
+.lbl-success{
+    -fx-text-fill: -color-success;
+    -fx-font-weight: 600;
+}
+
+/* =========================
+   SEPARATORS
+   ========================= */
+.separator *.line{
+    -fx-border-color: -color-border;
+    -fx-border-width: 1px;
+}
+
+/* =========================
+   SCROLLBAR (clean)
+   ========================= */
+.scroll-bar:horizontal, .scroll-bar:vertical{
+    -fx-background-color: transparent;
+}
+.scroll-bar .track{
+    -fx-background-color: transparent;
+}
+.scroll-bar .thumb{
+    -fx-background-color: rgba(107,114,128,0.25);
+    -fx-background-radius: 10px;
+}
+.scroll-bar .thumb:hover{
+    -fx-background-color: rgba(107,114,128,0.35);
+}
+
+/* =====================
+   AUTH (LOGIN SCREENS)
+   ===================== */
+.auth-root{
+    -fx-background-color: linear-gradient(to bottom right, #F5F7FF, #EEF2FF, #F8FAFF);
+}
+
+.auth-panel{
+    -fx-background-color: rgba(255,255,255,0.0);
+    -fx-border-color: rgba(17,24,39,0.08);
+    -fx-border-radius: 18px;
+    -fx-background-radius: 18px;
+}
+
+.auth-title{
+    -fx-font-size: 28px;
+    -fx-font-weight: 800;
+    -fx-text-fill: #111827;
+}
+
+.auth-subtitle{
+    -fx-text-fill: #6B7280;
+}
+
+.auth-input{
+    -fx-background-color: rgba(255,255,255,0.75);
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-color: rgba(17,24,39,0.14);
+    -fx-border-width: 1px;
+    -fx-padding: 12px 14px 12px 14px;
+    -fx-font-size: 13px;
+}
+
+.auth-input:focused{
+    -fx-border-color: #2563EB;
+    -fx-effect: dropshadow(gaussian, rgba(37,99,235,0.25), 10, 0.2, 0, 0);
+}
+
+.auth-error{
+    -fx-text-fill: #EF4444;
+    -fx-font-weight: 700;
+}
+
+.btn-ghost{
+    -fx-background-color: transparent;
+    -fx-text-fill: #374151;
+    -fx-font-weight: 700;
+    -fx-border-color: rgba(17,24,39,0.18);
+    -fx-border-width: 1px;
+    -fx-border-radius: 12px;
+    -fx-background-radius: 12px;
+    -fx-padding: 10px 14px 10px 14px;
+}
+
+.btn-ghost:hover{
+    -fx-background-color: rgba(17,24,39,0.04);
+}
+ /*=====================
+   PORTAL SELECT FIX
+   White card REMOVED
+   ===================== */
+.   /* =====================
+      PORTAL: REMOVE BIG WHITE CARD
+      ===================== */
+
+   /* Arka planı tam ekran boya (ister açık ister koyu yap) */
+   .page-bg{
+       -fx-background-color: linear-gradient(to bottom right, #0F172A, #1E3A8A, #1E40AF);
+   }
+
+   /* Kutu/panel tamamen gitsin */
+   .page-card{
+       -fx-background-color: transparent;
+       -fx-border-color: transparent;
+       -fx-border-width: 0;
+       -fx-background-radius: 0;
+       -fx-border-radius: 0;
+       -fx-effect: null;
+   }
+
+   /* Yazılar koyu zeminde net olsun */
+   .page-title{
+       -fx-text-fill: white;
+   }
+   .muted{
+       -fx-text-fill: rgba(255,255,255,0.85);
+   }
+   /* ============================
+      PORTAL – PROFESSIONAL THEME
+      ============================ */
+
+   /* Genel arka plan: temiz hastane hissi */
+   .page-bg {
+       -fx-background-color: linear-gradient(
+           to bottom,
+           #F8FAFF,
+           #EEF3FA
+       );
+   }
+
+   /* Beyaz kutu tamamen kapalı */
+   .page-card {
+       -fx-background-color: transparent;
+       -fx-border-color: transparent;
+       -fx-effect: null;
+       -fx-padding: 0;
+   }
+
+   /* ANA BAŞLIK – NET VE GÜÇLÜ */
+   .page-title {
+       -fx-text-fill: #0F2A44;   /* koyu hastane laciverti */
+       -fx-font-size: 25px;
+       -fx-font-weight: 900;
+   }
+
+   /* Alt açıklama */
+   .muted {
+       -fx-text-fill: #4B647D;
+       -fx-font-size: 14px;
+   }
+
+   /* ============================
+      BUTTON COLORS – PROFESSIONAL
+      ============================ */
+
+   /* Primary (Doctor / Patient / Register) */
+   .btn-primary {
+       -fx-background-color: #1F5FD1;   /* kurumsal mavi */
+       -fx-text-fill: white;
+       -fx-font-weight: 700;
+   }
+
+   .btn-primary:hover {
+       -fx-background-color: #174EB2;
+   }
+
+   /* Admin – ikincil */
+   .btn-secondary {
+       -fx-background-color: #E9EDF3;
+       -fx-text-fill: #0F2A44;
+       -fx-font-weight: 600;
+   }
+
+   .btn-secondary:hover {
+       -fx-background-color: #DCE3ED;
+   }
+   /* ===== PORTAL COLOR PALETTE 1: CLASSIC HOSPITAL ===== */
+
+   .page-bg {
+       -fx-background-color: #F5F8FC;
+   }
+
+   .page-title {
+       -fx-text-fill: #0B2A4A;
+   }
+
+   .muted {
+       -fx-text-fill: #5B6F82;
+   }
+
+   .btn-primary {
+       -fx-background-color: #1E5AA8;
+   }
+
+   .btn-primary:hover {
+       -fx-background-color: #174A8A;
+   }
+
+   .btn-secondary {
+       -fx-background-color: #E6EDF5;
+       -fx-text-fill: #0B2A4A;
+   }
+
+   /* LOGIN SAYFASI – GENEL KONUM */
+   .auth-root {
+	
+	    -fx-alignment: CENTER_RIGHT;
+	    -fx-padding: 0 50 0 0;   /* 160 → 220 */
+	}
+      /* sağdan boşluk */
+   }
+
+   /* LOGIN FORM KUTUSU */
+   .auth-panel {
+       -fx-pref-width: 520;
+       -fx-alignment: TOP_LEFT;       /* iç elemanlar düzgün dursun */
+   }
+   /* ============================
+      LOGIN PRO OVERRIDE (FINAL)
+      ============================ */
+
+   /* Tüm login ekranı: sağ hizalı + sol tarafta logo alanı */
+   .auth-root {
+       -fx-alignment: CENTER_RIGHT;
+       -fx-padding: 0 90 0 0; /* sağdan boşluk */
+       -fx-background-color: linear-gradient(to bottom, #F7FAFF, #EEF3FA);
+   }
+
+   /* Büyük kutu gitsin: paneli hafif “glass” yap */
+   .auth-panel {
+       -fx-background-color: rgba(255,255,255,0.65);   /* kutu gibi değil, şeffaf */
+       -fx-border-color: rgba(15,23,42,0.10);
+       -fx-border-width: 1px;
+
+       -fx-background-radius: 18px;
+       -fx-border-radius: 18px;
+
+       -fx-padding: 34px 34px 28px 34px;
+       -fx-pref-width: 520px;
+       -fx-max-width: 520px;
+
+       -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.16), 28, 0.22, 0, 10);
+   }
+
+   /* Başlık daha premium */
+   .auth-title {
+       -fx-font-size: 30px;
+       -fx-font-weight: 900;
+       -fx-text-fill: #0F172A;
+   }
+
+   /* Alt yazı */
+   .auth-subtitle {
+       -fx-text-fill: #475569;
+       -fx-font-size: 14px;
+   }
+
+   /* Inputlar: daha profesyonel */
+   .auth-input {
+       -fx-background-color: rgba(255,255,255,0.85);
+       -fx-border-color: rgba(15,23,42,0.12);
+       -fx-border-width: 1px;
+       -fx-background-radius: 14px;
+       -fx-border-radius: 14px;
+       -fx-padding: 12px 14px 12px 14px;
+       -fx-font-size: 13.5px;
+   }
+
+   .auth-input:focused {
+       -fx-border-color: rgba(37,99,235,0.65);
+       -fx-effect: dropshadow(gaussian, rgba(37,99,235,0.20), 14, 0.30, 0, 0);
+   }
+
+   /* Login butonu: premium */
+   .btn-primary {
+       -fx-background-color: #1E5AA8;
+       -fx-text-fill: white;
+       -fx-font-weight: 800;
+       -fx-background-radius: 14px;
+       -fx-padding: 12px 16px 12px 16px;
+   }
+
+   .btn-primary:hover {
+       -fx-background-color: #174A8A;
+   }
+
+   .btn-primary:pressed {
+       -fx-translate-y: 1px;
+   }
+
+   /* Back butonu: ghost gibi, daha modern */
+   .btn-ghost, .btn-secondary {
+       -fx-background-color: rgba(15,23,42,0.04);
+       -fx-text-fill: #0F172A;
+       -fx-font-weight: 700;
+       -fx-border-color: rgba(15,23,42,0.12);
+       -fx-border-width: 1px;
+       -fx-background-radius: 14px;
+       -fx-border-radius: 14px;
+       -fx-padding: 12px 16px 12px 16px;
+   }
+
+   .btn-ghost:hover, .btn-secondary:hover {
+       -fx-background-color: rgba(15,23,42,0.07);
+   }
+
+   .btn-ghost:pressed, .btn-secondary:pressed {
+       -fx-translate-y: 1px;
+   }
+   .auth-panel {
+       -fx-pref-width: 400px;     /* 520 → 440 */
+       -fx-max-width: 400px;
+
+       -fx-padding: 28px 28px 24px 28px;  /* iç boşluk küçüldü */
+   }
+   .auth-root {
+       -fx-padding: 0 50 0 0;   /* 90 → 120 */
+   }
+ 
+   /* =========================================
+      NO-CARD MODE (remove the big white box)
+      Paste at END of styles.css
+      ========================================= */
+
+   /* Arka plan: lacivert, kurumsal */
+   .auth-root {
+       -fx-background-color: linear-gradient(to bottom right, #0B1F3B, #0F2A4A, #163A66);
+       -fx-alignment: CENTER_RIGHT;
+       -fx-padding: 0 160 0 0; /* sağda kalsın */
+   }
+
+   /* KUTU GİTSİN: panel şeffaf, border yok, shadow yok */
+   .auth-panel, .page-card {
+       -fx-background-color: transparent;
+       -fx-border-color: transparent;
+       -fx-border-width: 0;
+       -fx-background-radius: 0;
+       -fx-border-radius: 0;
+       -fx-effect: null;
+   }
+
+   /* Başlıklar beyaz */
+   .auth-title, .page-title {
+       -fx-text-fill: white;
+       -fx-font-size: 32px;
+       -fx-font-weight: 900;
+   }
+
+   /* Alt yazılar açık gri */
+   .auth-subtitle, .muted {
+       -fx-text-fill: rgba(255,255,255,0.82);
+       -fx-font-size: 14px;
+   }
+
+   /* Inputlar: beyaz “floating” gibi dursun */
+   .auth-input, .text-field, .password-field {
+       -fx-background-color: rgba(255,255,255,0.92);
+       -fx-border-color: rgba(255,255,255,0.30);
+       -fx-border-width: 1px;
+       -fx-background-radius: 14px;
+       -fx-border-radius: 14px;
+       -fx-padding: 12px 14px 12px 14px;
+   }
+
+   .auth-input:focused, .text-field:focused, .password-field:focused {
+       -fx-border-color: rgba(255,255,255,0.55);
+       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.18), 12, 0.30, 0, 0);
+   }
+
+   /* Primary button: beyaz üstüne lacivert yazı (premium) */
+   .btn-primary, .primary-button {
+       -fx-background-color: white;
+       -fx-text-fill: #0B1F3B;
+       -fx-font-weight: 900;
+       -fx-background-radius: 14px;
+       -fx-padding: 12px 16px 12px 16px;
+   }
+
+   .btn-primary:hover, .primary-button:hover {
+       -fx-background-color: rgba(255,255,255,0.92);
+   }
+
+   .btn-primary:pressed, .primary-button:pressed {
+       -fx-translate-y: 1px;
+   }
+
+   /* Back button: transparan outline */
+   .btn-ghost, .btn-secondary, .secondary-button {
+       -fx-background-color: rgba(255,255,255,0.08);
+       -fx-text-fill: white;
+       -fx-font-weight: 800;
+       -fx-border-color: rgba(200,200,2,0.28);
+       -fx-border-width: 1px;
+       -fx-background-radius: 14px;
+       -fx-border-radius: 14px;
+       -fx-padding: 12px 16px 12px 16px;
+   }
+
+   .btn-ghost:hover, .btn-secondary:hover, .secondary-button:hover {
+       -fx-background-color: rgba(255,255,255,0.12);
+   }
+
+   .btn-ghost:pressed, .btn-secondary:pressed, .secondary-button:pressed {
+       -fx-translate-y: 1px;
+   }
+
+   /* Error */
+   .auth-error, .lbl-error {
+       -fx-text-fill: #FCA5A5;
+       -fx-font-weight: 900;
+   }
+   /* =========================================
+      FIX: PORTAL SCREEN TEXT CONTRAST
+      (Paste at END of styles.css)
+      ========================================= */
+
+   /* Portal ekranı açık arka plan + koyu yazı */
+   .page-bg {
+       -fx-background-color: #F6F8FC;   /* açık */
+   }
+
+   /* Portal kartı yok istiyorsan şeffaf kalsın */
+   .page-card {
+       -fx-background-color: transparent;
+       -fx-border-color: transparent;
+       -fx-effect: null;
+   }
+
+   /* Portal başlık ve alt yazı okunur olsun */
+   .page-title {
+       -fx-text-fill: #0F2A4A;  /* koyu lacivert */
+       -fx-font-size: 34px;
+       -fx-font-weight: 900;
+   }
+
+   .muted {
+       -fx-text-fill: #4B647D;  /* koyu gri-mavi */
+       -fx-font-size: 14px;
+   }
+
+   /* Portal buton yazıları ve görünümleri */
+   .page-bg .btn-primary,
+   .page-bg .btn-secondary {
+       -fx-text-fill: #0F2A4A;  /* yazı koyu */
+   }
+
+   /* Portal primary buton: lacivert dolu */
+   .page-bg .btn-primary {
+       -fx-background-color: #1E5AA8;
+       -fx-text-fill: white;
+   }
+   .page-bg .btn-primary:hover {
+       -fx-background-color: #174A8A;
+   }
+
+   /* Portal secondary: açık gri */
+   .page-bg .btn-secondary {
+       -fx-background-color: #EEF2F7;
+       -fx-border-color: rgba(15,42,74,0.16);
+       -fx-border-width: 1px;
+   }
+   .page-bg .btn-secondary:hover {
+       -fx-background-color: #E4EAF3;
+   }
+
+   .auth-root{
+       -fx-alignment: CENTER_RIGHT;
+       -fx-padding: 0 50 0 0;
+   }
+
+ 
+   .auth-panel {
+       -fx-translate-y: 6px;
+   }
+   /* ===================== */
+   /* SIDEBAR (LACİVERT)    */
+   /* ===================== */
+
+   .sidebar {
+       -fx-background-color: #0F2A44;
+       -fx-padding: 24 16;
+   }
+
+   /* Logo / Başlık */
+   .sidebar-title {
+       -fx-text-fill: white;
+       -fx-font-size: 20px;
+       -fx-font-weight: 800;
+   }
+
+   .sidebar-subtitle {
+       -fx-text-fill: rgba(255,255,255,0.7);
+   }
+   .menu-btn {
+       -fx-background-color: rgba(255,255,255,0.10);
+       -fx-text-fill: white;
+       -fx-background-radius: 14;
+       -fx-padding: 12 14;
+       -fx-font-weight: 600;
+   }
+
+   .menu-btn:hover {
+       -fx-background-color: rgba(255,255,255,0.22);
+   }
+   /* Ana içerik alanı */
+   .content-area {
+       -fx-background-color: #F7FAFC;
+       -fx-padding: 36;
+   }
+  
+	   /* Root layout */
+	   .rl-root {
+	       -fx-font-family: "Segoe UI";
+	       -fx-background-color: #F3F6FB;
+	   }
+
+	   /* LEFT brand panel */
+	   .rl-left {
+	       -fx-background-color: #0B2A4A;
+	       -fx-padding: 52 38 30 38;
+	   }
+
+	   .rl-brand-title {
+	       -fx-font-size: 30px;
+	       -fx-font-weight: 800;
+	       -fx-text-fill: white;
+	   }
+
+	   .rl-brand-subtitle {
+	       -fx-font-size: 20px;
+	       -fx-font-weight: 700;
+	       -fx-text-fill: rgba(255,255,255,0.92);
+	   }
+
+	   .rl-brand-desc {
+	       -fx-font-size: 13px;
+	       -fx-text-fill: rgba(255,255,255,0.75);
+	       -fx-padding: 8 0 0 0;
+	   }
+
+	   .rl-brand-foot {
+	       -fx-font-size: 11px;
+	       -fx-text-fill: rgba(255,255,255,0.55);
+	   }
+
+	   /* RIGHT side */
+	   .rl-right {
+	       -fx-background-color: #F3F6FB;
+	   }
+
+	   /* Center card */
+	   .rl-card {
+	       -fx-background-color: white;
+	       -fx-background-radius: 18;
+	       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 26, 0, 0, 8);
+	   }
+
+	   /* Text */
+	   .rl-title {
+	       -fx-font-size: 24px;
+	       -fx-font-weight: 800;
+	       -fx-text-fill: #0F172A;
+	   }
+	   .rl-muted{
+	       -fx-font-size: 13px;
+	       -fx-text-fill: #64748B;
+	   }
+		   .brand-logo {
+		       -fx-opacity: 0.98;
+		   }
+
+		   .rl-welcome {
+		       -fx-font-size: 13px;
+		       -fx-font-weight: 700;
+		       -fx-text-fill: rgba(255,255,255,0.80);
+		       -fx-padding: 14 0 0 0;
+		   }
+		   .brand-logo {
+		       -fx-background-color: rgba(255,255,255,0.10);
+		       -fx-padding: 14;
+		       -fx-background-radius: 16;
+		   }
+		   .rl-left {
+		       -fx-background-color: #0B2A4A;
+		       -fx-padding: 48 42 32 42;
+		   }
+
+		   .rl-brand-title {
+		       -fx-font-size: 36px;     /* Hospital daha güçlü */
+		       -fx-font-weight: 900;
+		       -fx-text-fill: white;
+		       -fx-padding: 10 0 0 0;
+		   }
+
+		   .rl-brand-subtitle {
+		       -fx-font-size: 18px;
+		       -fx-font-weight: 700;
+		       -fx-text-fill: rgba(255,255,255,0.92);
+		   }
+
+		   .rl-welcome {
+		       -fx-font-size: 13px;
+		       -fx-font-weight: 700;
+		       -fx-text-fill: rgba(255,255,255,0.75);
+		       -fx-padding: 14 0 4 0;
+		   }
+
+		   .rl-brand-desc {
+		       -fx-font-size: 13px;
+		       -fx-text-fill: rgba(255,255,255,0.70);
+		       -fx-padding: 8 0 0 0;
+		   }
+		   .rl-primary {
+		       -fx-background-color: #1D4ED8;
+		       -fx-text-fill: white;
+		   }
+		   .rl-primary:hover {
+		       -fx-background-color: #1E40AF;
+		   }
+
+		   .rl-outline {
+		       -fx-background-color: transparent;
+		       -fx-border-color: rgba(29, 78, 216, 0.55);
+		       -fx-border-width: 1.6;
+		       -fx-text-fill: #1D4ED8;
+		   }
+		   .rl-outline:hover {
+		       -fx-background-color: rgba(29, 78, 216, 0.08);
+		   }
+
+		   .rl-ghost {
+		       -fx-background-color: #F1F5F9;
+		       -fx-text-fill: #0F172A;
+		   }
+		   .rl-ghost:hover {
+		       -fx-background-color: #E8EEF6;
+		   }
+
+		   /* ===== Premium left panel ===== */
+		   .rl-left {
+		       -fx-background-color: #0B2A4A;
+		       -fx-padding: 52 44 34 44;
+		   }
+
+		   .logo-card {
+		       -fx-background-color: rgba(255,255,255,0.10);
+		       -fx-background-radius: 18;
+		       -fx-padding: 18;
+		       -fx-border-color: rgba(255,255,255,0.12);
+		       -fx-border-radius: 18;
+		   }
+
+		   /* Logo biraz daha net */
+		   .brand-logo {
+		       -fx-opacity: 1.0;
+		   }
+
+		   /* Welcome daha soft */
+		   .rl-welcome {
+		       -fx-font-size: 12px;
+		       -fx-font-weight: 700;
+		       -fx-text-fill: rgba(255,255,255,0.75);
+		       -fx-padding: 12 0 2 0;
+		   }
+
+		   /* Başlıkları daha düzgün hiyerarşi yap */
+		   .rl-brand-title {
+		       -fx-font-size: 34px;
+		       -fx-font-weight: 900;
+		       -fx-text-fill: white;
+		       -fx-padding: 6 0 0 0;
+		   }
+
+		   .rl-brand-subtitle {
+		       -fx-font-size: 18px;
+		       -fx-font-weight: 700;
+		       -fx-text-fill: rgba(255,255,255,0.92);
+		       -fx-padding: -6 0 0 0; /* iki satırı yakınlaştırır */
+		   }
+
+		   .rl-brand-desc {
+		       -fx-font-size: 13px;
+		       -fx-text-fill: rgba(255,255,255,0.70);
+		       -fx-padding: 10 0 0 0;
+		   }
+
+		   .rl-brand-foot {
+		       -fx-font-size: 11px;
+		       -fx-text-fill: rgba(255,255,255,0.55);
+		   }
+
+		   /* ===== Right card spacing + premium ===== */
+		   .rl-card {
+		       -fx-background-color: white;
+		       -fx-background-radius: 18;
+		       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 26, 0, 0, 8);
+		   }
+
+		   /* Kart içeriğini biraz daha aşağı al */
+		   .rl-title {
+		       -fx-padding: 6 0 0 0;
+		   }
+
+		   /* ===== Buttons: real product hierarchy ===== */
+		   .rl-btn {
+		       -fx-padding: 12 18;
+		       -fx-font-size: 13px;
+		       -fx-font-weight: 800;
+		       -fx-background-radius: 14;
+		       -fx-border-radius: 14;
+		       -fx-cursor: hand;
+		   }
+
+		   /* Primary: gerçek mavi buton */
+		   .rl-primary {
+		       -fx-background-color: #2563EB;
+		       -fx-text-fill: white;
+		   }
+		   .rl-primary:hover {
+		       -fx-background-color: #1D4ED8;
+		   }
+
+		   /* Outline: admin için */
+		   .rl-outline {
+		       -fx-background-color: transparent;
+		       -fx-border-color: rgba(37,99,235,0.55);
+		       -fx-border-width: 1.6;
+		       -fx-text-fill: #1D4ED8;
+		   }
+		   .rl-outline:hover {
+		       -fx-background-color: rgba(37,99,235,0.08);
+		   }		   .logo-card {
+		       -fx-background-color: rgba(255,255,255,0.10);
+		       -fx-background-radius: 18;
+		       -fx-padding: 14;              /* 18 yerine 14 */
+		       -fx-border-color: rgba(255,255,255,0.12);
+		       -fx-border-radius: 18;
+		       -fx-max-width: 320;           /* çok önemli */
+		       -fx-alignment: CENTER;
+		   }
+		   
+
+		   /* Ghost: register */
+		   .rl-ghost {
+		       -fx-background-color: #F1F5F9;
+		       -fx-text-fill: #0F172A;
+		   }
+		   .rl-ghost:hover {
+		       -fx-background-color: #E8EEF6;
+		   }
+
+		   /* Focus ring (mavi parlamayı yumuşat) */
+		   .rl-btn:focused {
+		       -fx-effect: dropshadow(gaussian, rgba(37,99,235,0.28), 18, 0, 0, 0);
+		   }
+		   .badge {
+		       -fx-background-color: rgba(37,99,235,0.10);
+		       -fx-text-fill: #1D4ED8;
+		       -fx-font-weight: 800;
+		       -fx-font-size: 11px;
+		       -fx-padding: 6 10;
+		       -fx-background-radius: 999;
+		       -fx-alignment: CENTER_LEFT;
+		   }
+		  
+		   }
+		   .logo-card {
+		       -fx-background-color: rgba(255,255,255,0.10);
+		       -fx-background-radius: 18;
+		       -fx-padding: 12;
+		       -fx-border-color: rgba(255,255,255,0.12);
+		       -fx-border-radius: 18;
+		       -fx-max-width: 320;
+		       -fx-alignment: CENTER;
+		   }
+		   .rl-root { -fx-background-color: #F3F6FB; }
+
+		   .rl-left{
+		     -fx-background-color: #0B2A4A;
+		     -fx-padding: 48 42 48 42;
+		   }
+
+		   .rl-right{
+		     -fx-padding: 38;
+		   }
+
+		   .auth-input{
+		     -fx-background-color: #FFFFFF;
+		     -fx-background-radius: 14;
+		     -fx-border-radius: 14;
+		     -fx-border-color: rgba(15,23,42,0.12);
+		     -fx-padding: 12 14;
+		   }
+
+		   .field-label{
+		     -fx-font-weight: 800;
+		     -fx-text-fill: #334155;
+		   }
+
+		   .section-title{
+		     -fx-font-size: 12px;
+		     -fx-font-weight: 800;
+		     -fx-text-fill: #0F172A;
+		   }
+		   /* ortak buton */
+		   .btn{
+		     -fx-padding: 12 16;
+		     -fx-background-radius: 14;
+		     -fx-border-radius: 14;
+		     -fx-font-weight: 800;
+		     -fx-cursor: hand;
+		   }
+
+		   /* primary */
+		   .btn-primary{
+		     -fx-background-color: #1D4ED8;
+		     -fx-text-fill: white;
+		   }
+		   .btn-primary:hover{
+		     -fx-background-color: #1E40AF;
+		   }
+
+		   /* outline */
+		   .btn-outline{
+		     -fx-background-color: transparent;
+		     -fx-border-color: rgba(15,23,42,0.18);
+		     -fx-border-width: 1.4;
+		     -fx-text-fill: #0F172A;
+		   }
+		   .btn-outline:hover{
+		     -fx-background-color: rgba(15,23,42,0.06);
+		   }
+
+		   /* ghost */
+		   .btn-ghost{
+		     -fx-background-color: rgba(15,23,42,0.06);
+		     -fx-text-fill: #0F172A;
+		   }
+		   .btn-ghost:hover{
+		     -fx-background-color: rgba(15,23,42,0.10);
+		   }
+		   .page-title { -fx-font-size: 28px; }
+		   .auth-input { -fx-padding: 10 12; }		  
+		    .btn { -fx-padding: 10 14; -fx-background-radius: 14; -fx-border-radius: 14; }
+		   .btn-primary { -fx-background-color: #1D4ED8; -fx-text-fill: white; }
+		   .rl-left{
+		     -fx-min-width: 470;
+		     -fx-pref-width: 470;
+		   }
+		   /* ========= FIX BLOCK (put at END) ========= */
+
+		   /* ✅ page-bg: nested hatasını düzelt */
+		   .page-bg{
+		       -fx-background-color: #F6F8FC;
+		   }
+
+		   /* ✅ auth-root: nested hatasını düzelt */
+		   .auth-root{
+		       -fx-alignment: CENTER_RIGHT;
+		       -fx-padding: 0 50 0 0;
+		   }
+
+		   /* ✅ rl-muted yarım kalmıştı: tamamla */
+		   .rl-muted{
+		       -fx-font-size: 13px;
+		       -fx-text-fill: #64748B;
+		   }
+		   .list-view .list-cell:filled:selected {
+		       -fx-background-color: rgba(37,99,235,0.18);
+		       -fx-text-fill: #0F172A;
+		   }
+		   .list-view .list-cell:filled:hover {
+		       -fx-background-color: rgba(37,99,235,0.10);
+		   }
+
+		   /* ✅ CSS içine yanlışlıkla giren XML/FXML satırları olmamalı
+		      (buraya bir şey yazmana gerek yok, sadece hatırlatma) */
+			  .icon-button{
+			      -fx-background-color: transparent;
+			      -fx-text-fill: #64748B;
+			      -fx-font-size: 14px;
+			      -fx-padding: 6 10;
+			      -fx-cursor: hand;
+			  }
+			  .icon-button:hover{
+			      -fx-background-color: rgba(15,23,42,0.06);
+			      -fx-background-radius: 10;
+			  }
+			  .icon-button{
+			      -fx-background-color: transparent;
+			      -fx-text-fill: #64748B;
+			      -fx-font-size: 14px;
+			      -fx-padding: 6 10;
+			      -fx-cursor: hand;
+			  }
+			  .icon-button:hover{
+			      -fx-background-color: rgba(15,23,42,0.06);
+			      -fx-background-radius: 10;
+			  }
+			  .icon-button{
+			      -fx-background-color: transparent;
+			      -fx-text-fill: #64748B;
+			      -fx-font-size: 14px;
+			      -fx-padding: 6 10;
+			      -fx-cursor: hand;
+			  }
+			  .icon-button:hover{
+			      -fx-background-color: rgba(15,23,42,0.06);
+			      -fx-background-radius: 10;
+			  }
+			  .icon-button {
+			      -fx-background-color: transparent;
+			      -fx-font-size: 14px;
+			      -fx-cursor: hand;
+			      -fx-padding: 0 8 0 8;
+			  }
+			  <VBox spacing="12" prefWidth="520" alignment="TOP_LEFT" styleClass="rl-left">
+			      <padding>
+			          <Insets top="40" right="32" bottom="32" left="32"/>
+			      </padding>
+
+			      <ImageView fitWidth="170" preserveRatio="true" smooth="true" styleClass="brand-logo">
+			          <image><Image url="@images/sbtu_logo.png"/></image>
+			      </ImageView>
+
+			      <Label text="Welcome to SBTÜ Hospital" styleClass="rl-welcome"/>
+				  
+		  

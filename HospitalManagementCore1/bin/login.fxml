@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<HBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ui.controllers.LoginController"
+      styleClass="rl-root">
+
+    <!-- SOL BRAND PANEL -->
+   <!-- SOL BRAND PANEL -->
+<VBox spacing="10"
+      prefWidth="420"
+      alignment="TOP_LEFT"
+      styleClass="rl-left">
+
+    <padding>
+        <Insets top="40" right="32" bottom="32" left="32"/>
+    </padding>
+
+    <ImageView fitWidth="230"
+               preserveRatio="true"
+               smooth="true"
+               styleClass="brand-logo">
+        <image>
+            <Image url="@images/sbtu_logo.png"/>
+        </image>
+
+        <!-- logoyu biraz sağa kaydırır -->
+        <VBox.margin>
+            <Insets left="40"/>
+        </VBox.margin>
+    </ImageView>
+
+    <Label text="Welcome to SBTÜ Hospital" styleClass="rl-welcome"/>
+    <Label text="Hospital" styleClass="rl-brand-title"/>
+    <Label text="Management System" styleClass="rl-brand-subtitle"/>
+    <Label text="Secure access for patients, doctors and staff"
+           styleClass="rl-brand-desc" wrapText="true"/>
+
+    <Region VBox.vgrow="ALWAYS"/>
+    <Label text="© 2025 Hospital Systems" styleClass="rl-brand-foot"/>
+</VBox>
+
+
+    <!-- SAĞ LOGIN -->
+    <StackPane HBox.hgrow="ALWAYS" styleClass="rl-right">
+        <VBox spacing="14"
+              maxWidth="520"
+              prefWidth="520"
+              styleClass="auth-card">
+
+            <padding>
+                <Insets top="34" right="34" bottom="28" left="34"/>
+            </padding>
+
+            <!-- Dinamik başlık: LoginContext.portalName -->
+            <Label fx:id="lblTitle"
+                   text="Login"
+                   styleClass="page-title"/>
+
+            <Label text="Please sign in to continue"
+                   styleClass="page-subtitle"/>
+
+            <VBox spacing="6" styleClass="field-block">
+                <Label text="User ID" styleClass="field-label"/>
+                <TextField fx:id="txtUsername"
+                           promptText="Username / TC / Doctor ID"
+                           styleClass="auth-input"
+                           maxWidth="Infinity"/>
+            </VBox>
+
+            <VBox spacing="6" styleClass="field-block">
+              <Label text="Password" styleClass="field-label"/>
+
+<StackPane>
+    <!-- gizli -->
+    <PasswordField fx:id="txtPassword"
+                   promptText="Enter password"
+                   styleClass="auth-input"/>
+
+    <!-- açık (başta gizli) -->
+    <TextField fx:id="txtPasswordVisible"
+               promptText="Enter password"
+               visible="false" managed="false"
+               styleClass="auth-input"/>
+
+    <!-- göz butonu -->
+    <Button text="👁"
+            onAction="#togglePassword"
+            StackPane.alignment="CENTER_RIGHT"
+            styleClass="icon-button"/>
+</StackPane>
+
+            </VBox>
+
+            <Label fx:id="lblError" styleClass="auth-error"/>
+
+            <HBox spacing="12">
+                <Button text="Back"
+                        onAction="#onBack"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="btn btn-ghost"/>
+
+                <Button text="Login"
+                        onAction="#onLogin"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="btn btn-primary"/>
+            </HBox>
+
+        </VBox>
+    </StackPane>
+
+</HBox>

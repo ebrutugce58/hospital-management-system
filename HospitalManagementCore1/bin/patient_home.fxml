@@ -1,0 +1,29 @@
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ui.controllers.PatientHomeController">
+
+    <!-- SOL MENÜ -->
+    <left>
+        <VBox styleClass="sidebar" prefWidth="240">
+            <Label text="SBTU Hospital" styleClass="sidebar-title"/>
+
+            <Button text="Book Appointment" styleClass="menu-btn"/>
+            <Button text="My Appointments" styleClass="menu-btn"/>
+            <Button text="History" styleClass="menu-btn"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <Button text="Logout"
+                    onAction="#onLogout"
+                    styleClass="btn-danger"/>
+        </VBox>
+    </left>
+
+    <!-- ORTA İÇERİK -->
+    <center>
+        <StackPane>
+            <Label text="Welcome Patient"/>
+        </StackPane>
+    </center>
+
+</BorderPane>

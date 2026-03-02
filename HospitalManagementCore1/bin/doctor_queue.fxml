@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="ui.controllers.DoctorQueueController"
+      spacing="14"
+      styleClass="page-card">
+
+    <padding>
+        <Insets top="28" right="28" bottom="28" left="28"/>
+    </padding>
+
+    <Label text="Doctor Queue" styleClass="page-title"/>
+
+    <Label fx:id="lblLoggedIn" text="Logged in doctor: -" style="-fx-text-fill:#374151;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label fx:id="lblPick" text="Select doctor:"/>
+        <ComboBox fx:id="cbDoctor" prefWidth="520"/>
+       
+    </HBox>
+
+    <Label text="Queue:"/>
+    <ListView fx:id="lvQueue" prefHeight="320"/>
+</VBox>
